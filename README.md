@@ -56,8 +56,5 @@ ARPEGIATOR
 
 KEYBOARD LAYOUT
 
-
-C      #      D      #      E      F      #      G      #      A      #      B
--------------------------------------------------------------------------------
 Q      2      W      3      E      R      5      T      6      Y      7      U
 I      9      O      0      P      @      -      *      pound  ^      home   del
