@@ -22,20 +22,26 @@ loop_0$
 set_in$
             cmp   #128         ;if key value = 128
             beq   note_off_0$      ;branch to turn note off
-            jmp    screen_handle$ ;else jump to screen handler
+            jmp   screen_handle$ ;else jump to screen handler
 note_off_0$
             lda   #0              ;reset
             sta   arp_count$      ;arp counter
             jsr   _setim$         ;and timer
+            lda   #128
             jsr   note_off$       ; jump to subroutine note_off$
             jmp   loop_0$         ;loop back for new keypress
             
 ;note off subroutine
 
-note_off$
-            ldx   cur_note$       ;load x with current note
-            ldy   vel_reg$        ;load y with velocity
+note_off$  
+            cmp   off_reg$        ;if a=off_reg$ 
+            beq   off_pass$       ;branch to off$
+trig_off$
+            sta   off_reg$        ;else store new value in off_reg$
+            ldx   prv_note$       ;load x with previous note
+            ldy   #0              ;load y with 0
             jsr   NOTEOFF         ; turn note off
+off_pass$   
             rts                   ;return to routine
 
 ;===============================================================================

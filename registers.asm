@@ -6,7 +6,7 @@
 ; ========================================
 
 
-;MIDI KEY REGISTERS
+;REGISTERS
 
 midi_reg$   byte  0   ;midi channel
 
@@ -24,30 +24,13 @@ arp_time$   byte  0   ;arp speed
 
 arp_string$ byte  0,0,0,0,0,0,0,0 ;arp step sequencer
 
-;-------------------------------------------------------------------------------
-
-;TEMP REGISTERS
-
 cur_note$       ;current note 
             byte  0
 prv_note$       ;previous note
             byte  0
-_a$             ;temp a storage
-            byte  0
-_x$             ;temp x storage
-            byte  0
-_y$             ;temp a storage
-            byte  0
-
-;-------------------------------------------------------------------------------
-
-            
-;ARP STEP COUNTER            
-
+off_reg$        ;note off check switch
+            byte  128
 arp_count$          ;arp counter
-            byte  0
-            
-arp_compare$        ;previous arp value
             byte  0
             
 

@@ -49,6 +49,7 @@
         <FileName>tables.asm</FileName>
         <FileName>registers.asm</FileName>
         <FileName>midi kernal.asm</FileName>
+        <FileName>MIDI KEYS.txt</FileName>
     </BuildList>
     <DetermineBuildOrder>1</DetermineBuildOrder>
     <PaddingByte>0</PaddingByte>
@@ -94,6 +95,17 @@
             <Name>midi kernal.asm</Name>
             <PrgName />
             <FileType>2</FileType>
+            <IncludeInBuild>True</IncludeInBuild>
+            <Regions />
+            <Breakpoints />
+            <Bookmarks />
+            <Topmost>False</Topmost>
+            <FileOpen>True</FileOpen>
+        </SourceFile>
+        <SourceFile>
+            <Name>MIDI KEYS.txt</Name>
+            <PrgName />
+            <FileType>5</FileType>
             <IncludeInBuild>True</IncludeInBuild>
             <Regions />
             <Breakpoints />
@@ -164,7 +176,7 @@
             <Regions />
             <Breakpoints />
             <Bookmarks />
-            <Topmost>True</Topmost>
+            <Topmost>False</Topmost>
             <FileOpen>True</FileOpen>
         </SourceFile>
     </SourceFiles>
